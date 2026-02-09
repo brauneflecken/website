@@ -65,6 +65,7 @@ html,body
 
 body {
   background: #FAF3E1;
+font-family: 'roboto_condensedregular', sans-serif;
 }
  #mama {margin: 50px;}
 
@@ -73,10 +74,45 @@ body {
 padding: 25px;
 width: 75vw;}
 
+#top {
+    position: relative; /* Essential so the buttons stay inside this box */
+    padding-top: 10px;  /* Space at the top */
+}
+
+.lang-header {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 14px;
+    color: #222;
+	z-index: 1000;
+}
+
+.lang-header a {
+    text-decoration: none;
+    color: #222;
+    padding: 2px 5px;
+}
+
+
+
+
+.lang-header a.active-lang {
+    font-weight: bold;
+    /* Optional: add a small underline or different color to show current language */
+    border-bottom: 2px solid #222; 
+}
+
+/* Adjust h1 margin so it doesn't crash into the buttons on small screens */
+h1 {
+    padding-right: 80px; 
+}
+
 #zwei
 {
 padding: 25px;
 width:70%;}
+
 
 
 
