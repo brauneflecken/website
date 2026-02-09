@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- Deklaration des DOCTYPES als HTML5, vor der Deklaration sollte nichts stehen!!! -->
+
+<!-- Start des HTML mit dem öffnenden <html>-Tag. Hier sollte die primäre Sprache des Inhaltes mit dem lang-Attribut definiert werden. -->
+<html lang="de">
+	
+	<!-- <head>-Bereich für Metainformationen (Schlagwörter, Autor, Titel etc.), externes CSS oder Scripteinbindungen --> 
+	<head>
+		
+		<!-- Kodierung der Webseite, wie mit Umlauten etc. umgegangen werden, UTF-( Standard für Webseiten -->
+		<meta charset="UTF-8">
+		
+		<!-- Der Viewport Meta Tag sollte genutzt werden, wenn ein flexibles Design (responsive) angestrebt wird. Mit den beiden "content"-Einstellungen "width=device-width, initial-scale=1.0" passt sich der Inhalt der Webseite optimal an jede Endgerätegröße an  -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!-- ...sorgt dafür, dass alle Links auf der Webseite sich automatisch in in einem neuen Tab/Fenster öffnen. Standardmäßig werden Links im selben Fenster geöffnet   -->
+		<base target="_blank">	
+		
+		<!-- Der Title-Tag wird im Tab eines Browsers angezeigt und ist ein unverzichtbarer Teil einer jeden HTML Seite. Die präzise Beschriftung von Title-Tags ist das A und O der Suchmaschinenoptimierung. Es gilt jeder URL einen einzigartigen individuellen Title-Tag zu geben. Für Google ist dies ein maßgeblicher Rankingfaktor-->
+		<title>Windgeschwindigkeiten in Deutschland: Sind unsere Flughäfen sicher?</title>
+		
+		<!-- Favicon: Icon,das neben dem Titel-Tag angezeigt wird. In der Praxis oft das Logo eines Unternehmens -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+		<!-- im Headerbereich definierte CSS-Styles -->	
+		<style>
+/* html und body sind die HTML-Elemente auf oberster Ebene. Alle darin enthaltene HTML-Elemente bekommen die hier definierten Style-Eigenschaften, wenn nicht extra definiert. U.a. wird hier die Breite und Höhe der gesamten Webseite mit 100% von einem beliebigen Endgerät definiert und die Schriftart "calibri,sans-serif" festgelegt - weitere sichere Schriftarten siehe  https://www.w3schools.com/cssref/css_websafe_fonts.asp */
+
+		html, body {
+			width: 100%;						
+            height: 100%;
+			font-family: calibri,sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+
+
+/* Das HTML-div-Element ist eine Box mit individueller Breite und Höhe, welche über eine individuelle id per CSS verknüpft ist. Der Inhalt der DIV-Box wird mit "display: flex", "flex-direction" und "align-items" zentriert dargestellt */
+		#center_div {
+			height:100%;
+			display: flex;					
+			flex-direction: column;			
+			align-items: center;			
+		}
+
+
+/* CSS-Eigenschaften für das iframe-Element - ein schwarzer Rahmen mit der Breite von 1px, sowie die Breite in % (von dem übergeordneten DIV-Element) und die Höhe in vh (relativ zur Höhe des Browserfensters so dass das iframe immer ausreichend hoch ist) */
+		iframe {
+			border: 1px solid black;
+			border-radius: 8px;
+			width:50%; 
+			height:70vh;
+		}
+
+
+/* CSS-Eigenschaften für das p-Element, um Texte zu definieren - mit margin:0.2em wird der Abstand zu anderen Elementen festgelegt */		
+		p {
+			margin: 0.2em;
+		} 
+		</style>
+		
+	</head>
+	
+	<!-- Jetzt kommt der <body>-Bereich für den Inhalt / das eigentliche HTML -->
+	<body>
+		<div id="center_div">
+			<h2>Windgeschwindigkeiten in Deutschland: Sind unsere Flughäfen sicher?</h2>
+			
+			<iframe src="versuch1/wetterkarte.html" title="Wetterkarte" loading="lazy"></iframe>
+			
+			<p>Autor: Julius Wilm / Datum: 06.02.2026</p>
+            <p>In diesem Beitrag werden die Windgeschwindigkeiten an den deutschen Flughäfen untersucht, um die Sicherheit der Flughäfen zu bewerten. Die Daten wurden von der Deutschen Wetterdienst (DWD) bereitgestellt und umfassen die durchschnittlichen Windgeschwindigkeiten über einen Zeitraum von 10 Jahren.</p>
+		</div>
+	</body>
+</html>

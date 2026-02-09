@@ -1,0 +1,219 @@
+/*  Ein Kommentar in CSS */
+
+/*  
+	Der * definiert eine globale Variable.
+	Den sogenannten "global reset".
+	Hier werden alle Elemente angesprochen, die später nicht anders definiert werden. 
+	Früher verwendet um die verschiedenen Browser Versionen auf den gleich Standard zu bringen. 
+	Oft wird auch heute noch, besonders bei Word Press Templates oder bei Bootstrap eine normalize.css eingesetzt, die dies für ALLE html Elemente durchführt.
+
+	In diesem Fall werden zwei Sachen erreicht:
+	margin und padding  werden auf 0 zurück gesetzt, um dann diese Eigenschaften mit eigenen Werten zu versehen.
+	Die Schrifttype wird mit font-family auf eine Standard Schrift eingestellt. So wird erreicht, dass IMMER ALLE Schriften denselben font haben. Sollten später z.B, Überschriften davon abweichen, müssen sie gesondert definiert werden.
+	Und einige Eigenschaften werden global definiert, um sie später nicht immer wieder einsetzen zu müssen.
+	Dies ist selbstverständlich komplett optional und kann jederzeit gelöscht oder verändert werden.
+*/
+
+
+@font-face {
+  font-family: 'cat_rhythmusregular';
+  src: url('../fonts/catrhythmus-webfont.woff2') format('woff2'),
+    url('../fonts/catrhythmus-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'roboto_condensedregular';
+  src:
+    url('../fonts/RobotoCondensed-Regular-webfont.woff2') format('woff2'),
+    url('../fonts/RobotoCondensed-Regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: 'grobe_deutschmeisterregular';
+    src: url('../fonts/grobedeutschmeister-webfont.woff2') format('woff2'),
+         url('../fonts/grobedeutschmeister-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+} 
+
+*
+{
+/* margin definiert den Aussenabstand einer Box */	
+	margin:0px;	
+/* padding definiert den Innenabstand einer Box */
+	padding:0px;
+/* font-family definiert die Schriftart */	
+	font-family: 'roboto_condensedregular';
+/* position:relative definiert die Startposition einer Box */	
+	position:relative;
+/*  box-sizing:border-box definiert das padding und border NICHT zu Breite und Höhe dazu addiert werden  */	
+	box-sizing:border-box;
+}
+
+html,body
+{
+	height:100%;
+}
+
+body {
+  background: #FAF3E1;
+}
+ #mama {margin: 50px;}
+
+#eins
+{background: #FA8112;
+padding: 25px;
+width: 75vw;}
+
+#zwei
+{
+padding: 25px;
+width:70%;}
+
+
+
+/* überschriften */
+
+  h1,
+  h2,
+  h3 {
+  font-family: 'cat_rhythmusregular';
+  text-align: left;
+  margin-left: 15px;
+  color: #222222;
+}
+
+h1
+ {
+	  font-size: 3em;
+	  text-shadow: 2px 2px #F5E7C6;
+ }
+
+ h2
+ {margin-top: 10px;
+margin-bottom: 10px;}
+
+
+p
+{
+	
+	
+
+	margin:30px auto;
+	_column-count: 2;
+    _column-gap: 20px;
+}
+
+
+
+
+a
+{
+	color:black;
+	text-decoration:underline;
+}
+
+
+.text-list
+{
+	width:70%;
+	
+
+	margin:30px auto;
+}
+
+
+
+
+img
+{
+	display: block;
+	margin:auto;
+	max-width:600px;
+}
+
+		iframe 
+		{
+			border: 1px solid black;
+			border-radius: 8px;
+			width:70%; 
+			aspect-ratio: 9/16;
+			margin: auto;
+			display: block;
+		}
+
+
+
+figcaption {
+    font-style: italic;
+    font-size: 0.9em;
+    margin-top: 8px;
+    color: #666;
+	width: 30vw;
+    line-height: 1.4;
+	margin-left: auto;         /* Centers the element itself */
+    margin-right: auto;  
+	text-align: center;       /* Centers the text inside the element */
+    display: block; 
+}
+
+/* MEDIA QUERY */
+@media screen and (max-width:800px) {
+
+
+	
+img	
+{
+	max-width: 100%;
+	height: auto;
+}
+
+
+ #mama {margin: 0px;}
+
+#eins
+{background: #FA8112;
+padding: 0px;
+width: 98vw;}
+
+#zwei
+{
+padding: 0px;
+width: 98vw;}
+
+
+p
+{
+	width:98%;
+	
+
+}
+
+
+		iframe 
+		{
+			
+			border-radius: 5px;
+			width:100vw; 
+			max-height:70vh;
+		}
+
+		figcaption {
+    font-style: italic;
+    font-size: 0.9em;
+    margin-top: 8px;
+    color: #666;
+	width: 80vw;
+    line-height: 1.4;
+	margin-left: auto;         /* Centers the element itself */
+    margin-right: auto;  
+}
+	}
