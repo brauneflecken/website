@@ -181,7 +181,7 @@ img
 			border: 1px solid black;
 			border-radius: 8px;
 			width:70%; 
-			aspect-ratio: 9/16;
+			aspect-ratio: 9/14;
 			margin: auto;
 			display: block;
 		}
@@ -200,6 +200,29 @@ figcaption {
 	text-align: center;       /* Centers the text inside the element */
     display: block; 
 }
+
+/* Footer */
+
+#footer {
+  margin: 30px;
+  border-top: 1px solid #437848;
+  /* Dünne Linie oben */
+  padding: 20px 0;
+  margin-top: 30px;
+  text-align: right;
+  clear: both;
+width: 75vw;}
+
+#footer p {
+  font-size: 0.6em;
+}
+
+#footer a {
+  font-size: 1em;
+  color: #161714;
+
+}
+
 
 /* MEDIA QUERY */
 @media screen and (max-width:800px) {
