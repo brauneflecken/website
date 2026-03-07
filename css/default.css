@@ -35,14 +35,7 @@
   font-display: swap;
 }
 
-@font-face {
-    font-family: 'grobe_deutschmeisterregular';
-    src: url('../fonts/grobedeutschmeister-webfont.woff2') format('woff2'),
-         url('../fonts/grobedeutschmeister-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
 
-} 
 
 *
 {
@@ -188,6 +181,22 @@ a
     margin-bottom: 1.5rem; 
 }
 
+
+
+.detail-box {
+    background-color: #E8E2D0;    /* A slightly darker, greyish tone of your body color */
+    border: 1px solid #C4BEB0;     /* Subtle border */
+    padding: 20px;                /* Internal spacing */
+    margin: 20px auto;            /* Vertical spacing and centering */
+    margin-left: 40px;            /* The extra indentation you requested */
+    width: 80%;                   /* Slightly slimmer than your main #zwei content */
+    border-radius: 4px;           /* Slightly rounded corners */
+    font-size: 0.95em;            /* Slightly smaller text to signify "detail" */
+    line-height: 1.5;
+}
+
+
+
 /* Bilder */
 img
 {
@@ -220,6 +229,19 @@ figcaption {
 	text-align: center;       /* Centers the text inside the element */
     display: block; 
 }
+
+/* Multicolumn */
+
+.column-container {
+    display: flex;
+    gap: 20px; /* Abstand zwischen den Spalten */
+    font-family: serif;
+    line-height: 1.5;
+  }
+    .column {
+    flex: 1;
+  }
+
 
 /* Footer */
 
@@ -307,4 +329,108 @@ width: 100%;}
 	margin-left: auto;         /* Centers the element itself */
     margin-right: auto;  
 }
+
+    .detail-box {
+        width: 90%;
+        margin-left: auto;        /* Remove large indentation on small screens */
+        margin-right: auto;
+    }
 	}
+  /* PRINT MEDIA QUERY */
+@media print {
+    /* Hide unnecessary elements */
+    .lang-header,
+    #footer p a,
+    iframe
+   {
+        display: none;
+    }
+    
+    /* Reset backgrounds and colors for printing */
+    body {
+        background: white;
+        color: black;
+        font-size: 12pt;
+        line-height: 1.4;
+        margin: 0.5in;
+    }
+    
+    #mama {
+        margin: 0;
+    }
+    
+    #eins {
+        background: none;
+        padding: 0;
+        width: 100%;
+    }
+    
+    #ueberschrift {
+        font-size: 24pt;
+        text-shadow: none;
+        color: black;
+        margin-left: 0;
+        padding-right: 0;
+        page-break-after: avoid;
+    }
+    
+    #untertitel {
+        font-size: 14pt;
+        color: black;
+        margin-left: 0;
+        page-break-after: avoid;
+    }
+    
+    #zwei {
+        padding: 0;
+        width: 100%;
+    }
+    
+    h1, h2, h3 {
+        font-family: 'cat_rhythmusregular', serif;
+        color: black;
+        page-break-after: avoid;
+    }
+    
+    p {
+        margin: 0.5em 0;
+        width: 100%;
+        padding: 0;
+        orphans: 3;           /* Minimum lines at bottom of page */
+        widows: 3;            /* Minimum lines at top of page */
+    }
+    
+    a {
+        color: black;
+        text-decoration: underline;
+    }
+   
+    .detail-box {
+        background: none;
+        border: 2px solid #000000;
+        margin: 1em 0;
+        padding: 10px;
+        width: 100%;
+        page-break-inside: avoid;  /* Try to keep detail boxes on one page */
+    }
+    
+    
+    figcaption {
+        color: #333;
+        width: 100%;
+        margin: 5px 0;
+        font-size: 10pt;
+    }
+    
+    /* Page break controls */
+    h1, h2, h3 {
+        page-break-after: avoid;
+    }
+    
+    img {
+        max-width: 100%;
+        page-break-inside: avoid;
+    }
+    
+
+}
